@@ -1,0 +1,26 @@
+#! /bin/bash
+
+# import danych (JSON ) z pliku do bazy mongoDB
+
+# Uzycie: [sciezkaDoPlikuZdanymi] [nazwaBazy] [port]
+
+
+# sprawdzanie ilosci parametrow
+if [ $# -ne 4 ]; then
+	helpme;
+fi
+
+# pobieranie zmiennych
+filePath=$1;
+dbName=$2;
+collectionName=$3;
+port=$4;
+
+# wykoananie polecenia importu
+mongoimport -d $dbName --port $port $filePath
+
+exit 0
+
+
+
+
