@@ -1,0 +1,18 @@
+/*
+Funkcja map wyswietla liste gwiazd 
+Funkcja reduce zlicza ile postow bylo na temat danych artystow
+*/
+
+
+function(doc) {
+  emit(doc.starName, 1);
+}
+
+
+function(tag, counts) {
+  var sum = 0;
+  for(var i=0; i < counts.length; i++) {
+     sum += counts[i];
+  }
+  return sum;
+}

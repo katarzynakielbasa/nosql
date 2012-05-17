@@ -1,0 +1,10 @@
+dane: lista gwiazd w okolicy naszego Słońca - ponad 2000 rekordów
+
+import danych do Mongo DB - skrypt mongoDBimport.sh
+
+import danych do CouchDB - skrypt couchDBimport.sh
+
+export z mongo DB do MySql - skrypt mongoDBexportMySQL.sh który uruchamia skrypt readMongo.php
+
+map reduce dla couch DB - plik couchDBmapreduce
+
